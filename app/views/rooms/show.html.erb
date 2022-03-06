@@ -1,8 +1,12 @@
 
 <h1>Chat room</h1>
+
 <div id ='messages'>
+  <%# _message.html.erbを呼び出す %>
+  <%# render partial: 'messages/message', collection: @messages の略 %>
   <%= render @messages %>
 </div>
+
 <form>
   <label>Say something:</label><br>
   <input type="text" data-behavior="room_speaker">
