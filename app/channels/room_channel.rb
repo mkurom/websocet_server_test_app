@@ -1,7 +1,10 @@
+# サーバーサイドの処理を実装
+
 class RoomChannel < ApplicationCable::Channel
   def subscribed
-    # stream_from "some_channel"
-    stream_from "room_channnel"
+    # Action Cableのメソッド：stream_from
+    # データの送受信を行う
+    stream_from "room_channel"
   end
 
   def unsubscribed
@@ -11,9 +14,7 @@ class RoomChannel < ApplicationCable::Channel
   def speak(data)
     # ActionCable.server.broadcast(
     #   'room_channel',
-    #   {
-    #     message: data['message']
-    #   }
+    #     {message: data['message']}
     # )
 
     Message.create! content: data['message']
