@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+# 参考URL
+
+https://zenn.dev/seita1996/articles/rails7-actioncable
+
+https://github.com/stompgem/stomp
